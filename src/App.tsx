@@ -11,9 +11,9 @@ function App() {
 
   return (
     <>
-   <Granim id="granim"></Granim>
-    <NavbarCommon></NavbarCommon>
-    <Home></Home>
+      <Granim id="granim"></Granim>
+      <NavbarCommon></NavbarCommon>
+      <Home></Home>
 
     </>
   )
