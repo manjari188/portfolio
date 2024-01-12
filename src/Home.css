@@ -1,0 +1,94 @@
+.home-content {
+    .row {
+        .home-header {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: bisque;
+            .home-hello {
+                &:hover {
+                    animation: shake 0.5s;
+                    animation-iteration-count: infinite;
+                }
+            }
+
+            h1 {
+                strong {
+                    animation: move-text 0.75s forwards;
+                    color: rebeccapurple;
+                }
+            }
+        }
+
+        .Typewriter {
+            font-size: 2.2em;
+            font-weight: 600;
+            margin-top: 2em;
+            color: rebeccapurple;
+        }
+    }
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes move-text {
+    0% {
+        bottom: -0.2em;
+        opacity: 1;
+    }
+
+    50% {
+        bottom: 0.2em;
+    }
+
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
