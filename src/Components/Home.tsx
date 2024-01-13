@@ -16,7 +16,7 @@ function Home() {
                     ]} />
                 </Col>
                 <Col md={5} style={{ paddingBottom: 20 }}>
-                    <img style={{ position: 'relative', height: '60vh' }} src='profile/src/assets/Coding-amico.png'></img>
+                    <img style={{ position: 'relative', height: '60vh' }} src='portfolio/src/assets/Coding-amico.png'></img>
                 </Col>
             </Row>
         </Container>
