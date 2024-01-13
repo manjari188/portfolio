@@ -14,8 +14,8 @@ function App() {
         <Granim id="granim"></Granim>
         <NavbarCommon></NavbarCommon>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/profile" element={<Home />} />
+          <Route path="/profile/resume" element={<Resume />} />
         </Routes>
       </BrowserRouter>
     </>

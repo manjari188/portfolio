@@ -10,12 +10,12 @@ function NavbarCommon() {
   return (
     <Navbar expand="lg" className="sticky-top">
       <Container>
-        <Navbar.Brand href="#home"><img src='src/assets/logo.svg'></img></Navbar.Brand>
+        <Navbar.Brand href="#home"><img src='profile/src/assets/logo.svg'></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav>
-            <Nav.Link className='link' as={Link} to="/"><RiHomeHeartFill /><span>Home</span></Nav.Link>
-            <Nav.Link className='link' as={Link} to="/resume"><ImProfile /><span>Resume</span></Nav.Link>
+            <Nav.Link className='link' as={Link} to="/profile"><RiHomeHeartFill /><span>Home</span></Nav.Link>
+            <Nav.Link className='link' as={Link} to="/profile/resume"><ImProfile /><span>Resume</span></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
