@@ -1,0 +1,37 @@
+.download-row{
+    margin-bottom: 40px;
+    margin-top:20px;
+}
+.page-controls {
+    position: relative;
+    bottom: 20px;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+
+    .page-control-container {
+        bottom: 0;
+        position: absolute;
+        background: white;
+        border-radius: 4px;
+        box-shadow: 0 30px 40px 0 rgba(16, 36, 94, .2);
+        box-sizing: border-box;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+        button {
+            width: 44px;
+            height: 44px;
+            background: white;
+            border: 0;
+            font: inherit;
+            font-size: .8em;
+            border-radius: 4px;
+        }
+
+        span{
+            font: inherit;
+            font-size: .8em;
+            padding: 0 0.5em;
+        }
+    }
+}

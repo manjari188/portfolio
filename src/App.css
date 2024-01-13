@@ -1,0 +1,31 @@
+#granim{
+    position: fixed!important;
+}
+
+.link{
+    color: bisque!important;
+    font-weight: bolder!important;
+    font-size: larger!important;
+    text-shadow: 1px 1px 2px #260f13!important;
+    svg{
+        margin-right: 4px
+    }
+}
+
+.navbar-brand{
+    img{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: -200px; /* Initial position off-screen to the left */
+        transform: translateY(-50%);
+        animation: slideIn 1s forwards;
+        top:40px;
+    }
+}
+
+@keyframes slideIn {
+    to {
+      left: 50px; /* Final position */
+    }
+  }
