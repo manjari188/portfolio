@@ -20,8 +20,13 @@
         left: -200px; /* Initial position off-screen to the left */
         transform: translateY(-50%);
         animation: slideIn 1s forwards;
-        top:40px;
     }
+}
+
+.navbar{
+    backdrop-filter: blur(15px)!important;
+    background-color: #36354fa9!important;
+    box-shadow: 0 10px 10px 0 rgba(9,5,29,.171)!important;
 }
 
 @keyframes slideIn {

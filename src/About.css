@@ -1,0 +1,32 @@
+.about-content {
+    position: relative;
+    height: 500px;
+    background: #e9e9e9;
+
+    .container {
+        top: 100px;
+        position: relative;
+
+        h1 {
+            color: #716456;
+            text-transform: uppercase;
+        }
+
+        .introduction-container {
+            margin: 0 auto;
+            padding: 20px 0px;
+            text-align: left;
+
+            p {
+                color: #555;
+                line-height: 1.6;
+            }
+
+            .emphasize {
+                font-weight: bold;
+                color: #a77464;
+            }
+
+        }
+    }
+}

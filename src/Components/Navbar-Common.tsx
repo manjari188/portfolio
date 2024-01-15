@@ -10,7 +10,7 @@ function NavbarCommon() {
   return (
     <Navbar expand="lg" className="sticky-top">
       <Container>
-        <Navbar.Brand href="#home"><img src='portfolio/src/assets/logo.svg'></img></Navbar.Brand>
+        <Navbar.Brand href="#home"><img src={window.location.origin + '/portfolio/images/logo.svg'}></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className='justify-content-end'>
           <Nav>

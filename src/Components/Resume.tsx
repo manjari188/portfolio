@@ -1,6 +1,6 @@
 import { Document, Page, pdfjs } from 'react-pdf';
 import pdf from '../assets/Resume.pdf'
-import { Button, Container, Row } from "react-bootstrap";
+import { Button, Row } from "react-bootstrap";
 import { useEffect, useState } from 'react';
 import '../Resume.css'
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -13,7 +13,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/b
 
 function Resume() {
     const [pageNumber, setPageNumber] = useState<number>(1);
-    const [scrollPosition, setScrollPosition] = useState();
+    const [scrollPosition, setScrollPosition] = useState<number>(1);
 
     useEffect(()=>{
         window.scrollTo(0, scrollPosition);
