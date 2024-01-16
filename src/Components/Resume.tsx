@@ -43,10 +43,12 @@ function Resume() {
                 </Button>
             </Row>
 
-            <Row className="resume">
+            <div className="resume">
+            <div className="pdf-container">
                 <Document file={pdf} className="d-flex justify-content-center">
                     <Page pageNumber={pageNumber} />
                 </Document>
+                </div>
                 <div className="page-controls">
                     <div className='page-control-container'>
                         <button type="button" onClick={prevPage} disabled={pageNumber === 1}>‹</button>
@@ -54,7 +56,7 @@ function Resume() {
                         <button type="button" onClick={nextPage} disabled={pageNumber === 2}>›</button>
                     </div>
                 </div>
-            </Row>
+            </div>
         </>
     );
 }

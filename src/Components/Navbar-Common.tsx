@@ -4,8 +4,29 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { RiHomeHeartFill } from "react-icons/ri";
 import { ImProfile } from "react-icons/im";
+import { GiHumanTarget } from "react-icons/gi";
+import { useLocation, useNavigate } from 'react-router-dom'
 
-function NavbarCommon() {
+interface navbarProps {
+  scrollIntoAbout: Function
+}
+
+function NavbarCommon(props: navbarProps) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const redirectToAbout = () =>{
+    if(location.pathname === '/portfolio'){
+      props.scrollIntoAbout();
+    }
+    else{
+      navigate('/portfolio');
+      setTimeout(()=>{
+        props.scrollIntoAbout()
+      },300);
+    }
+    
+  }
 
   return (
     <Navbar expand="lg" className="sticky-top">
@@ -16,6 +37,7 @@ function NavbarCommon() {
           <Nav>
             <Nav.Link className='link' as={Link} to="/portfolio"><RiHomeHeartFill /><span>Home</span></Nav.Link>
             <Nav.Link className='link' as={Link} to="/portfolio/resume"><ImProfile /><span>Resume</span></Nav.Link>
+            <Nav.Link onClick={redirectToAbout} className='link'><GiHumanTarget /><span>About</span></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

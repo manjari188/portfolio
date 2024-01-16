@@ -20,6 +20,9 @@
         left: -200px; /* Initial position off-screen to the left */
         transform: translateY(-50%);
         animation: slideIn 1s forwards;
+        @media only screen and (max-width: 600px) {
+            animation: slideInMobile 1s forwards;
+        }
     }
 }
 
@@ -31,6 +34,12 @@
 
 @keyframes slideIn {
     to {
-      left: 50px; /* Final position */
+      left: 50px;
+    }
+  }
+
+  @keyframes slideInMobile {
+    to {
+      left: 10px;
     }
   }

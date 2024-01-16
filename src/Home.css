@@ -29,6 +29,14 @@
             color: rebeccapurple;
             margin-bottom: 100px;
         }
+        .home-image{
+            position: relative; 
+            height: 60vh ;
+
+            @media only screen and (max-width: 600px) {
+                height: 40vh ;
+            }
+        }
     }
 }
 

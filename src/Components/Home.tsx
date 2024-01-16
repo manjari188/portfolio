@@ -2,8 +2,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import '../Home.css';
 import TypewriterString from "./Typewriter-String";
 import About from "./About";
+import { ForwardedRef } from "react";
 
-function Home() {
+interface IntermediateChildProps {
+    forwardedRef: ForwardedRef<HTMLDivElement | null>;
+    skills: Array<string>
+  }
+
+  const Home: React.FC<IntermediateChildProps> = ({ forwardedRef, skills }) => {
     return (
         <>
             <Container className="home-content">
@@ -18,11 +24,11 @@ function Home() {
                         ]} />
                     </Col>
                     <Col md={5} style={{ paddingBottom: 20 }}>
-                        <img style={{ position: 'relative', height: '60vh' }} src={window.location.origin + '/portfolio/images/Coding-amico.png'}></img>
+                        <img className="home-image" src={window.location.origin + '/portfolio/images/Coding-amico.png'}></img>
                     </Col>
                 </Row>
             </Container>
-            <About></About>
+            <About ref={forwardedRef} skills={skills}></About>
         </>
     )
 }
