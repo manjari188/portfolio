@@ -3,6 +3,7 @@ import '../Home.css';
 import TypewriterString from "./Typewriter-String";
 import About from "./About";
 import { ForwardedRef } from "react";
+import Projects from "./Projects";
 
 interface IntermediateChildProps {
     forwardedRef: ForwardedRef<HTMLDivElement | null>;
@@ -29,6 +30,7 @@ interface IntermediateChildProps {
                 </Row>
             </Container>
             <About ref={forwardedRef} skills={skills}></About>
+            <Projects></Projects>
         </>
     )
 }
