@@ -17,6 +17,17 @@ function Projects() {
             image: '/portfolio/images/weather-thumbnail.png'
         },
 
+        {
+            name: 'AI Intent',
+            description: 'This App allows users to get an overview over all the pretrained intents that are available from intents.json. Users can see at least one example expression without any extra clicks and can select/unselect intents individually or all at once.',
+            image: '/portfolio/images/AIIntent-thumbnail.png'
+        },
+        {
+            name: 'Mile Calculator',
+            description: 'This is an interactive App which allows users to calculate car range per charge on the basis of average speed, outside temperature, wether A/C is turned on and wheel size.',
+            image: '/portfolio/images/Milescalculator-thumbnail.png'
+        },
+
     ]
     useEffect(() => {
         AOS.init();

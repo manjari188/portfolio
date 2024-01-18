@@ -1,7 +1,11 @@
 .project-section {
     position: relative;
-    height: 600px;
+    height: 2200px;
     background: #f3c5eb;
+
+    @media only screen and (max-width: 600px) {
+        height: 2600px;
+    }
 
     .container {
         top: 100px;
@@ -15,6 +19,9 @@
 
     .row {
 
+        @media only screen and (max-width: 600px) {
+            margin: 0px;
+        }
         &.right {
             display: flex;
             justify-content: end;
@@ -28,6 +35,11 @@
             border-radius: 2px;
             margin: 12vh 0;
             padding: 10px;
+            @media only screen and (max-width: 600px) {
+                width:100%;
+                min-height: 300px;
+                height: fit-content;
+            }
 
             .project-detail{
                 padding: 20px;
