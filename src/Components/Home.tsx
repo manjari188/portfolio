@@ -4,13 +4,16 @@ import TypewriterString from "./Typewriter-String";
 import About from "./About";
 import { ForwardedRef } from "react";
 import Projects from "./Projects";
+import { projectInterface } from "../modal/projectInterface";
 
 interface IntermediateChildProps {
     forwardedRef: ForwardedRef<HTMLDivElement | null>;
-    skills: Array<string>
+    targetProjectRef: ForwardedRef<HTMLDivElement | null>;
+    skills: Array<string>;
+    projects: Array<projectInterface>;
   }
 
-  const Home: React.FC<IntermediateChildProps> = ({ forwardedRef, skills }) => {
+  const Home: React.FC<IntermediateChildProps> = ({ forwardedRef, targetProjectRef, skills, projects }) => {
     return (
         <>
             <Container className="home-content">
@@ -30,7 +33,7 @@ interface IntermediateChildProps {
                 </Row>
             </Container>
             <About ref={forwardedRef} skills={skills}></About>
-            <Projects></Projects>
+            <Projects projects={projects} ref={targetProjectRef}></Projects>
         </>
     )
 }

@@ -1,0 +1,11 @@
+.footer-section{
+    position: relative;
+    text-align: center;
+    background: #9a0075;
+    color: #eee;
+    font-family: cursive;
+
+    svg{
+        color: #f4afaf;
+    }
+}

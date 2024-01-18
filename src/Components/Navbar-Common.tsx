@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 import { RiHomeHeartFill } from "react-icons/ri";
 import { ImProfile } from "react-icons/im";
 import { GiHumanTarget } from "react-icons/gi";
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 interface navbarProps {
-  scrollIntoAbout: Function
+  scrollIntoAbout: Function,
+  scrollIntoProject: Function
 }
 
 function NavbarCommon(props: navbarProps) {
@@ -25,7 +27,18 @@ function NavbarCommon(props: navbarProps) {
         props.scrollIntoAbout()
       },300);
     }
-    
+  }
+
+  const redirectToProjects = () =>{
+    if(location.pathname === '/portfolio'){
+      props.scrollIntoProject();
+    }
+    else{
+      navigate('/portfolio');
+      setTimeout(()=>{
+        props.scrollIntoProject()
+      },300);
+    }
   }
 
   return (
@@ -38,6 +51,7 @@ function NavbarCommon(props: navbarProps) {
             <Nav.Link className='link' as={Link} to="/portfolio"><RiHomeHeartFill /><span>Home</span></Nav.Link>
             <Nav.Link className='link' as={Link} to="/portfolio/resume"><ImProfile /><span>Resume</span></Nav.Link>
             <Nav.Link onClick={redirectToAbout} className='link'><GiHumanTarget /><span>About</span></Nav.Link>
+            <Nav.Link onClick={redirectToProjects} className='link'><AiOutlineFundProjectionScreen /><span>Projects</span></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
