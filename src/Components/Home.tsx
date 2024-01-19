@@ -20,7 +20,7 @@ interface IntermediateChildProps {
             <Container className="home-content">
                 <Row>
                     <Col md={7} className="home-header">
-                        <h1 className="home-hello">Hello! 👋</h1>
+                        <h1 className="home-hello">Hello! <div className="hand-icon">👋</div></h1>
                         <h1>I'm <strong>Manjari Dhoundiyal </strong></h1>
                         <TypewriterString data={[
                             "Software Engineer",
