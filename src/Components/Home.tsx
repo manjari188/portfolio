@@ -5,6 +5,7 @@ import About from "./About";
 import { ForwardedRef } from "react";
 import Projects from "./Projects";
 import { projectInterface } from "../modal/projectInterface";
+import SocialLink from "./SocialLink";
 
 interface IntermediateChildProps {
     forwardedRef: ForwardedRef<HTMLDivElement | null>;
@@ -31,6 +32,7 @@ interface IntermediateChildProps {
                         <img className="home-image" src={window.location.origin + '/portfolio/images/Coding-amico.png'}></img>
                     </Col>
                 </Row>
+                <SocialLink></SocialLink>
             </Container>
             <About ref={forwardedRef} skills={skills}></About>
             <Projects projects={projects} ref={targetProjectRef}></Projects>
