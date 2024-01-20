@@ -14,7 +14,7 @@ const Projects = forwardRef((props: TargetChildProps, ref: ForwardedRef<HTMLDivE
         AOS.init();
     }, [])
     return (
-        <section ref={ref} className='project-section'>
+        <section data-testid="project" ref={ref} className='project-section'>
             <div className='container'>
                 <h1>Projects</h1>
 
@@ -23,7 +23,7 @@ const Projects = forwardRef((props: TargetChildProps, ref: ForwardedRef<HTMLDivE
                         <div className='project-detail'>
                             <div className='project-detail-layout'>
                                 <div className='project-image'>
-                                    <img src={project.image}></img>
+                                    <img alt={project.name} src={project.image}></img>
                                 </div>
                                 <div className='project-details'>
                                     <h3>{project.name}</h3>

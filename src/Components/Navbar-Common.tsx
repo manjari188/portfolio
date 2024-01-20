@@ -42,7 +42,7 @@ function NavbarCommon(props: navbarProps) {
   }
 
   return (
-    <Navbar expand="lg" className="sticky-top">
+    <Navbar data-testid="navbar" expand="lg" className="sticky-top">
       <Container>
         <Navbar.Brand as={Link} to="/portfolio" ><img src={window.location.origin + '/portfolio/images/logo.svg'}></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

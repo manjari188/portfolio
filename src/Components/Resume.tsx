@@ -37,6 +37,7 @@ function Resume() {
                     href={pdf}
                     target="_blank"
                     style={{ maxWidth: "250px", background: "#108e4c" }}
+                    data-testid="download-button"
                 >
                     <AiOutlineDownload />
                     &nbsp;Download CV
@@ -44,12 +45,12 @@ function Resume() {
             </Row>
 
             <div className="resume">
-            <div className="pdf-container">
+            <div data-testid="pdf-container" className="pdf-container">
                 <Document file={pdf} className="d-flex justify-content-center">
                     <Page pageNumber={pageNumber} />
                 </Document>
                 </div>
-                <div className="page-controls">
+                <div data-testid="page-controls" className="page-controls">
                     <div className='page-control-container'>
                         <button type="button" onClick={prevPage} disabled={pageNumber === 1}>‹</button>
                         <span>{pageNumber}</span>

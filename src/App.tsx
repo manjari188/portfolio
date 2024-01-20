@@ -1,17 +1,39 @@
 import './App.css'
 import NavbarCommon from './Components/Navbar-Common'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Granim from 'react-granim';
 import Home from './Components/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Resume from './Components/Resume';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Footer from './Components/Footer';
 import { projectInterface } from './modal/projectInterface';
+import Granim from "granim";
 
 
 
 function App() {
+
+  useEffect(()=>{
+
+    new Granim({
+      element: '#granim',
+      name: 'granim',
+      states : {
+          "default-state": {
+              gradients: [
+                  ['#834D9B', '#D04ED6'],
+                  ['#1CD8D2', '#93EDC7'],
+                  ['#12c2e9', '#c471ed'],
+                  ['#b92b27', '#1565C0'],
+                  ['#373B44', '#4286f4'],
+                  ['#2980B9', '#6DD5FA'],
+                  ['#6b6b83', '#3b8d99'],
+              ]
+          }
+      }
+   });
+
+  },[])
 
   const targetChildRef = useRef<HTMLDivElement | null>(null);
 
@@ -54,13 +76,14 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Granim id="granim"></Granim>
+      <canvas id="granim">
+</canvas>
         <NavbarCommon scrollIntoAbout={scrollIntoAbout} scrollIntoProject={scrollIntoProject}></NavbarCommon>
         <Routes>
           <Route path="/portfolio" element={<Home forwardedRef={targetChildRef} targetProjectRef={targetProjectRef} skills={skills} projects={projects}/>} />
           <Route path="/portfolio/resume" element={<Resume />} />
         </Routes>
-        <Footer></Footer>
+        <Footer data-testid="footer"></Footer>
       </BrowserRouter>
     </>
   )

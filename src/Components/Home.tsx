@@ -29,7 +29,7 @@ interface IntermediateChildProps {
                         ]} />
                     </Col>
                     <Col md={5} style={{ paddingBottom: 20 }}>
-                        <img className="home-image" src={window.location.origin + '/portfolio/images/Coding-amico.png'}></img>
+                        <img alt="coding-amico" className="home-image" src={window.location.origin + '/portfolio/images/Coding-amico.png'}></img>
                     </Col>
                 </Row>
                 <SocialLink></SocialLink>
