@@ -10,10 +10,8 @@ Welcome to the repository for my personal portfolio website! This project showca
 
 - About Me: A section introducing myself, highlighting my skills, and providing a brief overview of my professional journey.
 - Resume: A detailed resume section showcasing my education, work experience, and skills.
-- Projects: A portfolio of projects I have worked on, with descriptions, technologies used, and links to their respective GitHub repositories or live demos.
+- Projects: A portfolio of projects I have worked on, with descriptions.
 - Links: Direct links to my GitHub, YouTube, and LinkedIn profiles.
-
-- Configure the top-level `parserOptions` property like this:
 
 ## Installation
 
