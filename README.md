@@ -2,14 +2,16 @@
 
 Welcome to the repository for my personal portfolio website! This project showcases my professional background, projects, and provides links to my GitHub, YouTube, and LinkedIn profiles. The portfolio is built using Vite and React, with Vitest serving as the test runner and React Testing Library used for unit tests.
 
+<img width="1437" alt="Screenshot 2024-01-20 at 12 59 08 AM" src="https://github.com/manjari188/portfolio/assets/19758555/c16a154f-92b4-4ebd-8266-843a786cfcc0">
+
+
+
 ## Features
 
 - About Me: A section introducing myself, highlighting my skills, and providing a brief overview of my professional journey.
 - Resume: A detailed resume section showcasing my education, work experience, and skills.
-- Projects: A portfolio of projects I have worked on, with descriptions, technologies used, and links to their respective GitHub repositories or live demos.
+- Projects: A portfolio of projects I have worked on, with descriptions.
 - Links: Direct links to my GitHub, YouTube, and LinkedIn profiles.
-
-- Configure the top-level `parserOptions` property like this:
 
 ## Installation
 
